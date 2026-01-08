@@ -1,0 +1,10 @@
+<app-header></app-header>
+
+<app-search-bar (searchCity)="filterHomes($event)"></app-search-bar>
+
+<div class="grid">
+  <app-home-card
+    *ngFor="let home of filteredHomes"
+    [home]="home">
+  </app-home-card>
+</div>
